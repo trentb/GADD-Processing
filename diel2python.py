@@ -15,8 +15,7 @@ import pickle
 #root.destroy()
 currentLineNumber = 0
 
-filename = 'C:/Dropbox/Research/Data Sync/Leakage/8-27-14/X-E1/X-E1_1-81V-4Vsteps.diel'
-
+filename = 'C:/Dropbox/Research/Data Sync/Rayleigh/7-31-14/7-31-14_X-I8_100Hz-1MHz_3V.diel'
 ### path variables. load_path = parent folder, load_name = file name itself
 load_path, load_name = os.path.split(filename)
 
@@ -105,9 +104,10 @@ for i in range(0, len(linesRemaining)/2):
         temptextt = fgetl()
         remain = textt.rsplit(" ")[1]
         if i==0:
-                val[remain.strip()] = np.array(str2num(temptextt))
-        elif i==len(linesRemaining)/4:
-                val[remain.strip()] = np.array(str2num(temptextt))
+            remaini=remain.strip()
+            val[remain.strip()] = np.array(str2num(temptextt))
+        elif i==len(linesRemaining)/4 and remain.strip()!=remaini:
+               val[remain.strip()] = np.array(str2num(temptextt))
         else:
                 val[remain.strip()] = np.vstack([val[remain.strip()], str2num(temptextt)])
 
