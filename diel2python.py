@@ -15,7 +15,9 @@ import pickle
 #root.destroy()
 currentLineNumber = 0
 
-filename = 'C:/Dropbox/Research/Data Sync/Rayleigh/7-31-14/7-31-14_X-I8_100Hz-1MHz_3V.diel'
+#File Input
+filename = ' '
+
 ### path variables. load_path = parent folder, load_name = file name itself
 load_path, load_name = os.path.split(filename)
 
