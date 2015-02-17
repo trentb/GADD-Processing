@@ -310,6 +310,10 @@ import bootstrap as boot
 
 def rayleigh(filename,freq,thickness,diameter,minpts,maxpts,maxi):
     '''
+    
+    Author: Trent Borman
+            Susan Trolier-McKinstry Group
+    
     Reads .diel file and extracts CD0/Voltage field for requested
     frequency for all 3 runs. Converts to dielectric constant and electric
     field. Reshapes data and performs linear regressions on all ranges i:j
